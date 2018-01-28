@@ -1,0 +1,1 @@
+# Mopidy on a container
