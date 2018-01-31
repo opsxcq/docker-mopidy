@@ -24,11 +24,12 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - && \
     rm -rf /var/lib/apt/lists/*
 
 RUN useradd --system --uid 666 -M --shell /usr/sbin/nologin music && \
-    mkdir -p /home/music/.config/mopidy/
+    mkdir -p /home/music/.config/mopidy/ && \
+    mkdir /output
 
-COPY mopidy.conf .config/mopidy/mopidy.conf
+COPY mopidy.conf /home/music/.config/mopidy/mopidy.conf
 
-RUN chown -R music:music /home/music 
+RUN chown -R music:music /home/music /output
 
 USER music
 
