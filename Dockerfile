@@ -18,8 +18,15 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - && \
     pip install \
         Mopidy-Iris \
         Mopidy-GMusic \
+        pyasn1 \
         Mopidy-YouTube \
-        pyasn1==0.3.2 && \
+        Mopidy-Spotify \
+        cffi \
+        Mopidy-Notifier \
+        Mopidy-TuneIn \
+        Mopidy-Plex \
+        Mopidy-BeetsLocal \
+        && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
