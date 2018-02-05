@@ -30,6 +30,7 @@ import:
     languages: []
     detail: no
     flat: no
+    log: /music/beets-import.log
 
 # use the release-date of the original (first) release of an album?
 original_date: no
@@ -53,7 +54,8 @@ paths:
     default: %asciify{$albumartist}/%asciify{$album}%aunique{}/$track %asciify{$title}
     singleton: Non-Album/%asciify{$artist}/%asciify{$title}
     comp: Compilations/%asciify{$album}%aunique{}/$track %asciify{$title}
-
+    albumtype:soundtrack: 'Soundtracks/[%if{$year,$year,0000}] %the{%asciify{$album}%if{%aunique, %aunique{albumartist album year, albumtype label catalognum albumdisambig}}}/%if{$multidisc,$disk-}$track - %asciify{$title}'
+     
 # replace special characters in generated filenames
 replace:
     '[\\/]': _
@@ -143,6 +145,7 @@ plugins: [
     mpdupdate,
     #mpdstats,
     missing,
+    ftintitle,    
     duplicates
 ]
 pluginpath: []
