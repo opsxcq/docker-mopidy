@@ -46,11 +46,15 @@ RUN pip install discogs-client pyechonest pylast \
                 #beets-popularity \
 # Aditional modules for beets plugins
 RUN pip install beautifulsoup4 BeautifulSoup
+
+# Install extra plugins for beets
+COPY beets-plugins/* /usr/local/lib/python2.7/dist-packages/beetsplug/
     
 RUN useradd --system --uid 666 -M --shell /usr/sbin/nologin music && \
     mkdir -p /home/music/.config/mopidy/ && \
     mkdir -p /home/music/.config/beets/ && \
     mkdir /output
+
 
 
 COPY mopidy.conf /home/music/.config/mopidy/mopidy.conf
