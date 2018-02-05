@@ -50,16 +50,15 @@ RUN pip install beautifulsoup4 BeautifulSoup
 # Install extra plugins for beets
 COPY beets-plugins/* /usr/local/lib/python2.7/dist-packages/beetsplug/
     
+# User configuration
 RUN useradd --system --uid 666 -M --shell /usr/sbin/nologin music && \
     mkdir -p /home/music/.config/mopidy/ && \
     mkdir -p /home/music/.config/beets/ && \
     mkdir /output
 
-
-
 COPY mopidy.conf /home/music/.config/mopidy/mopidy.conf
 COPY beets.yaml /home/music/.config/beets/config.yaml
-RUN chown -R music:music /home/music /output
+RUN chown -R music:music /home/music /output /music
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
