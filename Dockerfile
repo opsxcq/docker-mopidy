@@ -54,7 +54,7 @@ COPY beets-plugins/* /usr/local/lib/python2.7/dist-packages/beetsplug/
 RUN useradd --system --uid 666 -M --shell /usr/sbin/nologin music && \
     mkdir -p /home/music/.config/mopidy/ && \
     mkdir -p /home/music/.config/beets/ && \
-    mkdir /output
+    mkdir /output /music
 
 COPY mopidy.conf /home/music/.config/mopidy/mopidy.conf
 COPY beets.yaml /home/music/.config/beets/config.yaml
