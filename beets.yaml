@@ -145,7 +145,7 @@ plugins: [
     mpdupdate,
     #mpdstats,
     missing,
-    ftintitle,    
+    ftInTitle,    
     duplicates
 ]
 pluginpath: []
