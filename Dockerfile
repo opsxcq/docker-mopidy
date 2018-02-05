@@ -41,9 +41,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN pip install discogs-client pyechonest pylast \
                 python-mpd beets discogs-client \
                 pyechonest pylast \
-                #beets-popularity \
                 beets-bbq
 
+                #beets-popularity \
 # Aditional modules for beets plugins
 RUN pip install beautifulsoup4 BeautifulSoup
     
