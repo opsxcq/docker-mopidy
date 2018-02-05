@@ -1,7 +1,7 @@
 # Beets configuration --------------------------------------------------------
 
 directory: /music/beets
-library: /music/library
+library: /music/beetslibrary.blb
 
 import:
     # write metadata to music files
@@ -135,7 +135,6 @@ match:
 # Plugins --------------------------------------------------------------------
 
 plugins: [
-    beetslocal,
     discogs,
     lyrics,
     fetchart,
