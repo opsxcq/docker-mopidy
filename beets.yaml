@@ -135,6 +135,7 @@ match:
 # Plugins --------------------------------------------------------------------
 
 plugins: [
+    beetslocal,
     discogs,
     lyrics,
     fetchart,
@@ -146,6 +147,7 @@ plugins: [
     #mpdstats,
     missing,
     ftInTitle,    
+    the,
     duplicates
 ]
 pluginpath: []
