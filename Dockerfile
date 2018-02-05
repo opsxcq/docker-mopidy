@@ -25,7 +25,8 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - && \
         Mopidy-Notifier \
         Mopidy-TuneIn \
         Mopidy-Plex \
-        Mopidy-BeetsLocal
+        Mopidy-BeetsLocal \
+        Mopidy-Local-Images
 
 # Install beets to be used as a backend for mopidy
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
