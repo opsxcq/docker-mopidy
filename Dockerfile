@@ -25,19 +25,44 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - && \
         Mopidy-Notifier \
         Mopidy-TuneIn \
         Mopidy-Plex \
-        Mopidy-BeetsLocal \
-        && \
+        Mopidy-BeetsLocal
+
+# Install beets to be used as a backend for mopidy
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    wget curl locales \
+    python2.7-dev python-pip python-virtualenv \
+    beets \
+    imagemagick \
+    && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Setup beets configuration and plugins
+RUN pip install discogs-client pyechonest pylast \
+                python-mpd beets discogs-client \
+                pyechonest pylast \
+                beets-popularity \
+                beets-bbq
+
+# Aditional modules for beets plugins
+RUN pip install beautifulsoup4 BeautifulSoup
+    
 RUN useradd --system --uid 666 -M --shell /usr/sbin/nologin music && \
     mkdir -p /home/music/.config/mopidy/ && \
+    mkdir -p /home/music/.config/beets/ && \
     mkdir /output
 
-COPY mopidy.conf /home/music/.config/mopidy/mopidy.conf
 
+COPY mopidy.conf /home/music/.config/mopidy/mopidy.conf
+COPY beets.yaml /home/music/.config/beets/config.yaml
 RUN chown -R music:music /home/music /output
 
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+# Runtime configuration
 USER music
 
 EXPOSE 6680
@@ -45,5 +70,6 @@ EXPOSE 6600
 
 VOLUME /music
 VOLUME /downloaded
+WORKDIR /music
 
 ENTRYPOINT ["mopidy"]
