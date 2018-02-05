@@ -41,7 +41,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN pip install discogs-client pyechonest pylast \
                 python-mpd beets discogs-client \
                 pyechonest pylast \
-                beets-popularity \
+                #beets-popularity \
                 beets-bbq
 
 # Aditional modules for beets plugins
