@@ -187,7 +187,7 @@ scrub:
 
 # required for mpdstats
 mpd:
-    host: localhost
+    host: mopidy 
     port: 6600
     password: ""
 
