@@ -24,7 +24,6 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - && \
         cffi \
         Mopidy-Notifier \
         Mopidy-TuneIn \
-        Mopidy-Plex \
         Mopidy-BeetsLocal \
         Mopidy-Local-Images
 

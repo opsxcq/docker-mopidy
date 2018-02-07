@@ -205,4 +205,4 @@ missing:
     total: no
 
 duplicates:
-    checksum: no  # expensive
+    checksum: no # expensive
