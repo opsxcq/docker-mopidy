@@ -45,7 +45,7 @@ class ftInTitle(BeetsPlugin):
             # write a new title and a new artistfield.
             def write_artist_and_title_field_and_print_edited_file_loc(track,albumArtist,titleField,featuringPartofArtistField,sortArtist):
                 print track.__getattr__("path")
-                print "albumartist:",albumArtist," title:",titleField," featuartist:",featuringPartofArtistField
+                print "albumartist:",unicode(albumArtist)," title:",unicode(titleField)," featuartist:",unicode(featuringPartofArtistField)
                 track["artist"] = albumArtist
                 track["artist_sort"] = rewrite_sort_artist(sortArtist)
                 track["title"] = titleField.strip() + " feat." + featuringPartofArtistField
