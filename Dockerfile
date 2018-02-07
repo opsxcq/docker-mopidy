@@ -6,7 +6,8 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl gcc gnupg python python-pip python-crypto \
-    python-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools && \
+    python-gst-1.0 \
+    gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools && \
     curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - && \
     curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list && \
     apt-get update && \
