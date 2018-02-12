@@ -83,7 +83,7 @@ class BeetsLocalLibraryProvider(backend.LibraryProvider):
                              query)
             if 'any' in query:
                 filtered = ''
-                normalized =  [ (token.strip())for token in query['any'].split(',')]
+                normalized =  [ (token.strip())for token in query['any'][0].split(',')]
                 for token in normalized:
                     filtered = filtered + " " + "\"" +token+ "\""
                 logger.debug(u'Running beets query: %s' % filtered)
