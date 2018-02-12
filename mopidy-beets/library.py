@@ -82,7 +82,11 @@ class BeetsLocalLibraryProvider(backend.LibraryProvider):
                              'search',
                              query)
             if 'any' in query:
-                filtered = 'punk "^green day"'
+                filtered = ''
+                normalized =  [ (token.strip())for token in query['any'].split(',')]
+                for token in normalized:
+                    filtered = filtered + " " + "\"" +token+ "\""
+                logger.debug(u'Running beets query: %s' % filtered)
                 tracks = self.lib.items(filtered)
             else:
                 track_query = self._build_beets_track_query(query)
