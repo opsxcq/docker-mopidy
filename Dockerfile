@@ -23,10 +23,10 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - && \
         Mopidy-YouTube \
         Mopidy-Spotify \
         cffi \
-        Mopidy-Notifier \
         Mopidy-TuneIn \
         Mopidy-BeetsLocal \
         Mopidy-Local-Images
+
 
 # Install beets to be used as a backend for mopidy
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -41,10 +41,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # Setup beets configuration and plugins
 RUN pip install discogs-client pyechonest pylast \
                 python-mpd beets discogs-client \
-                pyechonest pylast \
-                beets-bbq
+                pyechonest pylast
 
-                #beets-popularity \
 # Aditional modules for beets plugins
 RUN pip install beautifulsoup4 BeautifulSoup
 
@@ -77,3 +75,4 @@ VOLUME /downloaded
 WORKDIR /music
 
 ENTRYPOINT ["mopidy"]
+CMD ["-vvv"]
