@@ -75,4 +75,4 @@ VOLUME /downloaded
 WORKDIR /music
 
 ENTRYPOINT ["mopidy"]
-CMD ["-vv"]
+CMD ["-v"]
