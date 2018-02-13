@@ -75,6 +75,7 @@ class Popularity(BeetsPlugin):
             # store the popularity value as a flexible attribute
             
             item['popularity'] = popularity
+            item.try_write()
             item.store()
 
         except requests.exceptions.HTTPError:
