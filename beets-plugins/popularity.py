@@ -72,7 +72,7 @@ class Popularity(BeetsPlugin):
             #popularity = tracks[0]["popularity"]
             item['popularity'] = int(popularity)
             self._log.info(
-                u'{0.artist} - {0.album} - {0.title}: {o.popularity}', item)
+                u'{0.artist} - {0.album} - {0.title}: {0.popularity}', item)
 
             # store the popularity value as a flexible attribute
             
