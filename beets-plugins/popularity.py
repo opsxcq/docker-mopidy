@@ -75,7 +75,7 @@ class Popularity(BeetsPlugin):
             # store the popularity value as a flexible attribute
             if not nowrite:
                 item['popularity'] = popularity
-                item.write()
+                item.store()
 
         except requests.exceptions.HTTPError:
             self._log.warning(u'Bad status code in API response')
