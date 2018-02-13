@@ -147,7 +147,8 @@ plugins: [
     missing,
     ftInTitle,    
     the,
-    duplicates
+    duplicates,
+    popularity
 ]
 pluginpath: []
 
