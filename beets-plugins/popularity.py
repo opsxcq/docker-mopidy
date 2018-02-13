@@ -73,9 +73,9 @@ class Popularity(BeetsPlugin):
                 u'{0.artist} - {0.album} - {0.title}: {1}', item, popularity)
 
             # store the popularity value as a flexible attribute
-            if not nowrite:
-                item['popularity'] = popularity
-                item.store()
+            
+            item['popularity'] = popularity
+            item.store()
 
         except requests.exceptions.HTTPError:
             self._log.warning(u'Bad status code in API response')
