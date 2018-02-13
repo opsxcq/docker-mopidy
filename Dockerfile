@@ -48,7 +48,7 @@ RUN pip install beautifulsoup4 BeautifulSoup
 
 # Install extra plugins for beets
 COPY beets-plugins/* /usr/local/lib/python2.7/dist-packages/beetsplug/
-    
+
 # Install extra plugins for mopidy
 COPY mopidy-beets/* /usr/local/lib/python2.7/dist-packages/mopidy_beetslocal/
 
