@@ -207,3 +207,22 @@ missing:
 
 duplicates:
     checksum: no # expensive
+
+smartplaylist:
+    playlist_dir: /music/playlists
+    playlists:
+        - name: all.m3u
+          query: ''
+
+        - name: punk.m3u
+          query: 'genre:punk'
+          
+        - name: metal.m3u
+          query: 'genre:metal'
+          
+        - name: metal-old.m3u
+          query: 'genre:metal year:..1990'
+
+        - name: pop.m3u
+          query: 'genre:pop'
+
