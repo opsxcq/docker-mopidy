@@ -44,7 +44,8 @@ class Popularity(BeetsPlugin):
 
     def _on_write(self, item, path, tags):
         # query and set popularity value for the item that is to be imported
-        self._set_popularity(item, False)
+        if not 'popularity' in item:
+          self._set_popularity(item, False)
 
     def _set_popularity(self, item, nowrite):
         # query Spotify API
