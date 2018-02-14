@@ -149,7 +149,8 @@ plugins: [
     the,
     duplicates,
     popularity,
-    smartplaylist
+    smartplaylist,
+    types
 ]
 pluginpath: []
 
@@ -208,6 +209,11 @@ missing:
 
 duplicates:
     checksum: no # expensive
+
+types:
+  rating: int
+  likes: int
+  dislikes: int
 
 smartplaylist:
     playlist_dir: /music/playlists
