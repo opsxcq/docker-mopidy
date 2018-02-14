@@ -148,7 +148,8 @@ plugins: [
     ftInTitle,    
     the,
     duplicates,
-    popularity
+    popularity,
+    smartplaylist
 ]
 pluginpath: []
 
