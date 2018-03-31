@@ -31,7 +31,7 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - && \
 # Install beets to be used as a backend for mopidy
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     wget curl locales \
-    python2.7-dev python-pip python-virtualenv \
+    python2.7-dev python-pip python-virtualenv libffi-dev libssl-dev \
     beets \
     imagemagick \
     && \
@@ -41,7 +41,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # Setup beets configuration and plugins
 RUN pip install discogs-client pyechonest pylast \
                 python-mpd beets discogs-client \
-                pyechonest pylast
+                pyechonest pylast \
+                pyOpenSSL ndg-httpsclient pyasn1
 
 # Aditional modules for beets plugins
 RUN pip install beautifulsoup4 BeautifulSoup
