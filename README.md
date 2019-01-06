@@ -4,8 +4,6 @@
 
 Mopidy plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients.
 
-# Streaming to Icecast
-
 # Streaming to Snapcast
 
 To stream to snapcast you don't have to change anything, but the following code in the `mopidy.conf` is responsible for the streaming
