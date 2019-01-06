@@ -3,7 +3,6 @@ FROM debian:jessie
 LABEL maintainer "opsxcq@strm.sh"
 
 RUN apt-get update && \
-    apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl gcc gnupg python python-pip python-crypto \
     python-gst-1.0 \
