@@ -61,7 +61,7 @@ python-mpd==0.3.0
 PyYAML==3.12
 raven==6.6.0
 requests==2.4.3
-rsa==3.4.2
+rsa==4.7
 six==1.11.0
 tornado==3.2.2
 Unidecode==1.0.22
