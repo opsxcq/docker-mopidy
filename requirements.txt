@@ -66,6 +66,6 @@ six==1.11.0
 tornado==3.2.2
 Unidecode==1.0.22
 uritools==2.1.0
-urllib3==1.9.1
+urllib3==1.26.5
 validictory==1.1.2
 virtualenv==1.11.6
