@@ -16,7 +16,7 @@ funcsigs==1.0.2
 future==0.16.0
 gmusicapi==11.0.1
 gpsoauth==0.4.1
-html5lib==0.999
+html5lib==0.999999999
 httplib2==0.11.3
 ipaddress==1.0.19
 jellyfish==0.5.6
