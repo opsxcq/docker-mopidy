@@ -60,7 +60,7 @@ python-dateutil==2.7.2
 python-mpd==0.3.0
 PyYAML==3.12
 raven==6.6.0
-requests==2.4.3
+requests==2.31.0
 rsa==3.4.2
 six==1.11.0
 tornado==3.2.2
