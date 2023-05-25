@@ -63,7 +63,7 @@ raven==6.6.0
 requests==2.4.3
 rsa==3.4.2
 six==1.11.0
-tornado==3.2.2
+tornado==6.3.2
 Unidecode==1.0.22
 uritools==2.1.0
 urllib3==1.9.1
